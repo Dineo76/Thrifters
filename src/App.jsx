@@ -10,7 +10,8 @@ function App() {
     <>
      <Dashboard></Dashboard>
       <Products></Products> 
-      <Footer></Footer>
+   <Footer></Footer>
+
      
       
     </>
