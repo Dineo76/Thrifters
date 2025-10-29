@@ -1,8 +1,15 @@
-import React from "react";
-import { Dashboard } from "./components/Dashboard";
+import './App.css'
+import Products from "./components/Products.jsx";
 
 function App() {
-  return <Dashboard />;
+  
+
+  return (
+    <>
+      <Products></Products> 
+      
+    </>
+  )
 }
 
 export default App;
