@@ -1,6 +1,7 @@
 import './App.css'
 import { Dashboard } from './components/Dashboard.jsx';
 import Products from "./components/Products.jsx";
+import Footer from './components/footer.jsx';
 
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
     <>
      <Dashboard></Dashboard>
       <Products></Products> 
+      <Footer></Footer>
      
       
     </>
