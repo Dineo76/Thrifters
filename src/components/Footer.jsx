@@ -1,10 +1,9 @@
-import './Footer.css'; // Make sure this path is correct
-
+import './Footer.css';
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Left side: Branding */}
+        
         <div className="footer-left">
           <h2>Thrifters @ {new Date().getFullYear()}</h2>
           <p>Sustainable fashion for everyone.</p>
@@ -29,6 +28,8 @@ export default function Footer() {
           </p>
         </div>
       </div>
+      
     </footer>
+    
   );
 }

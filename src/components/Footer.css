@@ -1,11 +1,17 @@
 .footer {
-    background-color: #3e2723; /* deep brown */
-    color: #f5e6ca; /* light beige text */
+    background-color: white; 
+    color: black; 
     padding: 1.5rem 0;
     margin-top: auto;
     font-family: 'Poppins', sans-serif;
     text-align: center;
     border-top: 3px solid #5d4037;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
   }
   
   .footer-container {
@@ -19,13 +25,13 @@
   
   /* Left side: Branding */
   .footer-left h2 {
-    color: #fff8e1;
+    color: #2c2c2c;
     margin-bottom: 0.25rem;
   }
   
   .footer-left p {
     font-size: 0.9rem;
-    color: #e6c89c;
+    color: #666666;
   }
   
   /* Right side: Contact info */
@@ -40,13 +46,13 @@
   }
   
   .footer-right a {
-    color: #ffd180; /* light golden link */
+    color: #333333; /* dark link */
     text-decoration: none;
     transition: color 0.3s ease;
   }
   
   .footer-right a:hover {
-    color: #fff3e0; /* soft cream hover */
+    color: #5d4037; /* brown hover */
   }
   
   /* Responsive layout */
