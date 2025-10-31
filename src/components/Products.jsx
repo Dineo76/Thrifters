@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Products.css";
+import { AppContext } from "./AppContext";
+import { ADD_TO_CART, REMOVE_FROM_CART } from "./actions";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [searchTerm, setSearchTerm] = useState(""); // 🔍 NEW
+  const [searchTerm, setSearchTerm] = useState(""); 
+  const { state, dispatch } = useContext(AppContext);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -21,7 +24,16 @@ export default function Products() {
 
   const convertToRand = (usd) => (usd * 18.5).toFixed(2);
 
-  // 🔎 Combine category filter + search filter
+  const handleAddToCart = (product) => {
+    dispatch({ type: ADD_TO_CART, payload: product });
+  };
+
+  const handleRemoveFromCart = (product) => {
+    dispatch({ type: REMOVE_FROM_CART, payload: product });
+  };
+
+  const isInCart = (productId) => state.cart?.some((item) => item.id === productId);
+
   const filteredProducts = products.filter((p) => {
     const matchesCategory =
       selectedCategory === "All" ||
@@ -36,7 +48,6 @@ export default function Products() {
 
   return (
     <div className="products-container">
-      {/* 🔍 Search Bar */}
       <div className="search-bar">
         <input
           type="text"
@@ -47,7 +58,6 @@ export default function Products() {
         />
       </div>
 
-      {/* 🏷️ Category Buttons */}
       <div className="category-buttons">
         {categories.map((cat) => (
           <button
@@ -72,7 +82,11 @@ export default function Products() {
                 <p className="product-desc">{product.description}</p>
                 <div className="product-footer">
                   <span className="product-price">R {convertToRand(product.price)}</span>
-                  <button className="add-btn">Add to Cart</button>
+                  {isInCart(product.id) ? (
+                    <button className="add-btn" onClick={() => handleRemoveFromCart(product)}>Remove</button>
+                  ) : (
+                    <button className="add-btn" onClick={() => handleAddToCart(product)}>Add to Cart</button>
+                  )}
                 </div>
               </div>
             </div>
