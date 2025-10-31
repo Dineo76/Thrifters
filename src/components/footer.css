@@ -69,30 +69,7 @@
     color: #5d4037;
   }
 
-  /* Bottom section /
-  .footer-bottom {
-    background-color: #f8f8f8;
-    padding: 1.5rem 0;
-    border-top: 1px solid #e0e0e0;
-  }
-
-  .footer-bottom-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .copyright p {
-    color: #666666;
-    font-size: 0.9rem;
-    margin: 0;
-    text-align: center;
-  }
-
-  / Responsive layout */
+  
   @media (max-width: 768px) {
     .footer-container {
       flex-direction: column;
