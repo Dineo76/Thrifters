@@ -4,13 +4,13 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
 
-        {/* Logo Section */}
+      
         <div className="footer-section">
           <h2 className="footer-logo">THRIFTERS</h2>
           <p className="footer-tagline">Sustainable fashion for everyone.</p>
         </div>
 
-        {/* Contact Section */}
+        
         <div className="footer-section">
           <h3>CONTACT</h3>
           <ul>
@@ -20,7 +20,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Location Section */}
+       
         <div className="footer-section">
           <h3>LOCATION</h3>
           <ul>
@@ -29,7 +29,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Social Section */}
+       
         <div className="footer-section">
           <h3>FOLLOW US</h3>
           <ul>
@@ -38,16 +38,15 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Section */}
-      <div className="footer-bottom">
-        <div className="footer-bottom-container">
-          {/* Copyright */}
-          <div className="copyright">
-            <p>Thrifters @ {new Date().getFullYear()} - All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-
+      <div
+    className="footer-bottom-container d-flex justify-content-center align-items-center"
+    style={{ textAlign: "center" }}
+  >
+    <p className="mb-0">
+      Thrifters © {new Date().getFullYear()} - All rights reserved.
+    </p>
+  </div>
+ 
     </footer>
 
   );
