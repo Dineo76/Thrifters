@@ -9,7 +9,6 @@ export function Dashboard() {
   
     return (
       <>
-        {/* Navbar */}
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
           <div className="container">
             <a className="navbar-brand fw-bold" href="#">Thrifter</a>
@@ -29,7 +28,6 @@ export function Dashboard() {
                   </li>
                 ))}
   
-                {/* Cart */}
                 <li className="nav-item ms-3">
                   <a className="nav-link position-relative d-flex align-items-center" href="#">
                     Cart
@@ -39,7 +37,6 @@ export function Dashboard() {
                   </a>
                 </li>
   
-                {/* User Icon */}
                 <li className="nav-item ms-3">
                   <a className="nav-link d-flex align-items-center" href="#">
                     <i className="bi bi-person-circle fs-5 text-white"></i>
@@ -52,7 +49,6 @@ export function Dashboard() {
   
         <h1 style={{ textAlign: "center", marginTop: "20px" }}>🛒 Welcome to Thrifters</h1>
   
-        {/* Hero Section */}
         <section className="hero text-center py-5 border-bottom">
           <div className="container">
             <h1 className="display-4 fw-bold">Love it... Click it</h1>
